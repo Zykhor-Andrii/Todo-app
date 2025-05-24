@@ -1,17 +1,10 @@
 import { createRoot } from 'react-dom/client';
 
-import './styles/index.css';
-import './styles/todo-list.css';
-import './styles/filters.css';
+import './styles/index.scss';
 
 import { App } from './App';
+import React from 'react';
 
-const container = document.getElementById('root');
+const container = document.getElementById('root') as HTMLDivElement;
 
-if (!container) {
-  throw new Error('Root container not found');
-}
-
-const root = createRoot(container);
-
-root.render(<App />);
+createRoot(container).render(<App />);
